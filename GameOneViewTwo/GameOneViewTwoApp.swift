@@ -13,8 +13,14 @@ struct GameOneViewTwoApp: App {
 
     var body: some Scene {
         WindowGroup {
+            let settings = TimeOnOff()
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(settings)
         }
     }
 }
+/*
+ var settings = TimeOnOff()
+ ContentView().environmentObject(settings)
+ */

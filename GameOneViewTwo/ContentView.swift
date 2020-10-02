@@ -7,74 +7,94 @@
 
 import SwiftUI
 import CoreData
+import UserNotifications
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
+    @EnvironmentObject var timeOnOff : TimeOnOff
+   
+  
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
+//                           CoreDataView()
+//                           ContView()
+//                             FirstView()
+        FirstNewView()
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification), perform: { _ in
+                print("Moving to the background")
+                // Вика нотификацията като излезеш от приложението след 5 секунди
+                createNotification()
+                let toDay = Date()
+                self.timeOnOff.isNotification = true
+                let diffComponents = Calendar.current.dateComponents([.second, .minute], from: toDay)
+                let sec = diffComponents.second
+                let min = diffComponents.minute
+                print("...\(Int(sec!) + (Int(min!) * 60))")
+                
+                timeOnOff.offApp = Int(sec!) + (Int(min!) * 60)
+            })
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification), perform: { _ in
+                print("Moving to App")
+                let toDay = Date()
+                self.timeOnOff.isNotification = false
+                let diffComponents = Calendar.current.dateComponents([.second, .minute], from: toDay)
+                let sec = diffComponents.second
+                let min = diffComponents.minute
+                print("...\(Int(sec!) + (Int(min!) * 60))")
+                
+                timeOnOff.onApp = Int(sec!) + (Int(min!) * 60)
+                
+                print("\(timeOnOff.onApp - timeOnOff.offApp)")
+                
+                if timeOnOff.onApp - timeOnOff.offApp > 10 {
+                    timeOnOff.start = 0
+                    timeOnOff.pauseTimer()
+                    print("Out from App")
+                }
 
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+            })
+            .onAppear() {
+                // Иска разрешение да изпраща нотификации като зареди ContentView
+                notificationPermission()
+                //
+            }
+//        ProbaView()
+    }
+    func notificationPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
             }
         }
     }
+    func createNotification () {
+        let content = UNMutableNotificationContent()
+        content.title = "Go back to the app"
+        content.subtitle = "You will lose your points in 10 sec"
+        content.sound = UNNotificationSound.default
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        // show this notification five seconds from now
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
 
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
+        // choose a random identifier
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+        // add our notification request
+        UNUserNotificationCenter.current().add(request)
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//        ContentView()
+        Text("alo")
     }
 }
+/*
+ let diffComponents = Calendar.current.dateComponents([.second, .minute], from: toDay)
+ let sec = diffComponents.second
+ let min = diffComponents.minute
+ let s = Int(sec!) + (Int(min!) * 60)
+ */

@@ -15,6 +15,22 @@
 		CC9BCD152523A338007FC885 /* GameOneViewTwo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD132523A338007FC885 /* GameOneViewTwo.xcdatamodeld */; };
 		CC9BCD202523A338007FC885 /* GameOneViewTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD1F2523A338007FC885 /* GameOneViewTwoTests.swift */; };
 		CC9BCD2B2523A338007FC885 /* GameOneViewTwoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD2A2523A338007FC885 /* GameOneViewTwoUITests.swift */; };
+		CC9BCD3D2523A4F5007FC885 /* Alo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD3B2523A4F5007FC885 /* Alo+CoreDataClass.swift */; };
+		CC9BCD3E2523A4F5007FC885 /* Alo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD3C2523A4F5007FC885 /* Alo+CoreDataProperties.swift */; };
+		CC9BCD452523A51B007FC885 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD432523A51B007FC885 /* SaveView.swift */; };
+		CC9BCD462523A51B007FC885 /* CoreDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD442523A51B007FC885 /* CoreDataView.swift */; };
+		CC9BCD542523A79D007FC885 /* PauseButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD4B2523A79D007FC885 /* PauseButtons.swift */; };
+		CC9BCD552523A79D007FC885 /* SettingsTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD4C2523A79D007FC885 /* SettingsTimer.swift */; };
+		CC9BCD562523A79D007FC885 /* PickerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD4D2523A79D007FC885 /* PickerTime.swift */; };
+		CC9BCD572523A79D007FC885 /* ContView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD4E2523A79D007FC885 /* ContView.swift */; };
+		CC9BCD582523A79D007FC885 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD4F2523A79D007FC885 /* ProgressBar.swift */; };
+		CC9BCD592523A79D007FC885 /* TextTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD502523A79D007FC885 /* TextTimer.swift */; };
+		CC9BCD5A2523A79D007FC885 /* MiniTextTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD512523A79D007FC885 /* MiniTextTimer.swift */; };
+		CC9BCD5B2523A79D007FC885 /* Color extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD522523A79D007FC885 /* Color extension.swift */; };
+		CC9BCD5C2523A79D007FC885 /* Button extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCD532523A79D007FC885 /* Button extension.swift */; };
+		CC9BCDC1252431E6007FC885 /* ProbaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9BCDC0252431E6007FC885 /* ProbaView.swift */; };
+		CCCF774A252583B6007430E3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF7749252583B6007430E3 /* ButtonView.swift */; };
+		CCCF774F2525848B007430E3 /* FirstNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF774E2525848B007430E3 /* FirstNewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,22 @@
 		CC9BCD262523A338007FC885 /* GameOneViewTwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOneViewTwoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9BCD2A2523A338007FC885 /* GameOneViewTwoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOneViewTwoUITests.swift; sourceTree = "<group>"; };
 		CC9BCD2C2523A338007FC885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9BCD3B2523A4F5007FC885 /* Alo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CC9BCD3C2523A4F5007FC885 /* Alo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CC9BCD432523A51B007FC885 /* SaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
+		CC9BCD442523A51B007FC885 /* CoreDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataView.swift; sourceTree = "<group>"; };
+		CC9BCD4B2523A79D007FC885 /* PauseButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButtons.swift; sourceTree = "<group>"; };
+		CC9BCD4C2523A79D007FC885 /* SettingsTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTimer.swift; sourceTree = "<group>"; };
+		CC9BCD4D2523A79D007FC885 /* PickerTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTime.swift; sourceTree = "<group>"; };
+		CC9BCD4E2523A79D007FC885 /* ContView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContView.swift; sourceTree = "<group>"; };
+		CC9BCD4F2523A79D007FC885 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		CC9BCD502523A79D007FC885 /* TextTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTimer.swift; sourceTree = "<group>"; };
+		CC9BCD512523A79D007FC885 /* MiniTextTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniTextTimer.swift; sourceTree = "<group>"; };
+		CC9BCD522523A79D007FC885 /* Color extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color extension.swift"; sourceTree = "<group>"; };
+		CC9BCD532523A79D007FC885 /* Button extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Button extension.swift"; sourceTree = "<group>"; };
+		CC9BCDC0252431E6007FC885 /* ProbaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbaView.swift; sourceTree = "<group>"; };
+		CCCF7749252583B6007430E3 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		CCCF774E2525848B007430E3 /* FirstNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +111,8 @@
 		CC9BCCFC2523A336007FC885 = {
 			isa = PBXGroup;
 			children = (
+				CC9BCD3B2523A4F5007FC885 /* Alo+CoreDataClass.swift */,
+				CC9BCD3C2523A4F5007FC885 /* Alo+CoreDataProperties.swift */,
 				CC9BCD072523A336007FC885 /* GameOneViewTwo */,
 				CC9BCD1E2523A338007FC885 /* GameOneViewTwoTests */,
 				CC9BCD292523A338007FC885 /* GameOneViewTwoUITests */,
@@ -101,6 +135,9 @@
 			children = (
 				CC9BCD082523A336007FC885 /* GameOneViewTwoApp.swift */,
 				CC9BCD0A2523A336007FC885 /* ContentView.swift */,
+				CC9BCD602523A876007FC885 /* OneView */,
+				CC9BCD4A2523A79D007FC885 /* Timer */,
+				CC9BCD422523A51B007FC885 /* ToDoView */,
 				CC9BCD0C2523A338007FC885 /* Assets.xcassets */,
 				CC9BCD112523A338007FC885 /* Persistence.swift */,
 				CC9BCD162523A338007FC885 /* Info.plist */,
@@ -134,6 +171,41 @@
 				CC9BCD2C2523A338007FC885 /* Info.plist */,
 			);
 			path = GameOneViewTwoUITests;
+			sourceTree = "<group>";
+		};
+		CC9BCD422523A51B007FC885 /* ToDoView */ = {
+			isa = PBXGroup;
+			children = (
+				CC9BCD432523A51B007FC885 /* SaveView.swift */,
+				CC9BCD442523A51B007FC885 /* CoreDataView.swift */,
+			);
+			path = ToDoView;
+			sourceTree = "<group>";
+		};
+		CC9BCD4A2523A79D007FC885 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				CC9BCD4B2523A79D007FC885 /* PauseButtons.swift */,
+				CC9BCD4C2523A79D007FC885 /* SettingsTimer.swift */,
+				CC9BCD4D2523A79D007FC885 /* PickerTime.swift */,
+				CC9BCD4E2523A79D007FC885 /* ContView.swift */,
+				CC9BCD4F2523A79D007FC885 /* ProgressBar.swift */,
+				CC9BCD502523A79D007FC885 /* TextTimer.swift */,
+				CC9BCD512523A79D007FC885 /* MiniTextTimer.swift */,
+				CC9BCD522523A79D007FC885 /* Color extension.swift */,
+				CC9BCD532523A79D007FC885 /* Button extension.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		CC9BCD602523A876007FC885 /* OneView */ = {
+			isa = PBXGroup;
+			children = (
+				CCCF774E2525848B007430E3 /* FirstNewView.swift */,
+				CCCF7749252583B6007430E3 /* ButtonView.swift */,
+				CC9BCDC0252431E6007FC885 /* ProbaView.swift */,
+			);
+			path = OneView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +337,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9BCD572523A79D007FC885 /* ContView.swift in Sources */,
+				CC9BCDC1252431E6007FC885 /* ProbaView.swift in Sources */,
+				CCCF774F2525848B007430E3 /* FirstNewView.swift in Sources */,
+				CCCF774A252583B6007430E3 /* ButtonView.swift in Sources */,
+				CC9BCD3E2523A4F5007FC885 /* Alo+CoreDataProperties.swift in Sources */,
 				CC9BCD152523A338007FC885 /* GameOneViewTwo.xcdatamodeld in Sources */,
+				CC9BCD552523A79D007FC885 /* SettingsTimer.swift in Sources */,
+				CC9BCD562523A79D007FC885 /* PickerTime.swift in Sources */,
+				CC9BCD542523A79D007FC885 /* PauseButtons.swift in Sources */,
+				CC9BCD3D2523A4F5007FC885 /* Alo+CoreDataClass.swift in Sources */,
+				CC9BCD462523A51B007FC885 /* CoreDataView.swift in Sources */,
+				CC9BCD592523A79D007FC885 /* TextTimer.swift in Sources */,
+				CC9BCD5A2523A79D007FC885 /* MiniTextTimer.swift in Sources */,
 				CC9BCD122523A338007FC885 /* Persistence.swift in Sources */,
+				CC9BCD452523A51B007FC885 /* SaveView.swift in Sources */,
+				CC9BCD5B2523A79D007FC885 /* Color extension.swift in Sources */,
+				CC9BCD5C2523A79D007FC885 /* Button extension.swift in Sources */,
+				CC9BCD582523A79D007FC885 /* ProgressBar.swift in Sources */,
 				CC9BCD0B2523A336007FC885 /* ContentView.swift in Sources */,
 				CC9BCD092523A336007FC885 /* GameOneViewTwoApp.swift in Sources */,
 			);
