@@ -4,7 +4,7 @@
 //
 //  Created by Ivan Dimitrov on 4.11.20.
 //
-//
+//novo 
 
 import Foundation
 import CoreData
